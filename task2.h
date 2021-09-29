@@ -12,8 +12,8 @@ public:
     Fruit(const std::string& n, const std::string& c) :
         name(n), color(c){}
 
-    const std::string GetName() const { return name; }
-    const std::string GetColor() const { return color; }
+    const std::string& GetName() const { return name; }
+    const std::string& GetColor() const { return color; }
 
 private:
     std::string name;

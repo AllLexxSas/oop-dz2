@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 
 
@@ -14,9 +15,9 @@ protected:
 private:
     static int items;
     int age;
-    const char *name;
+    std::string name;
     int weight;
-    const char *gender;
+    std::string gender;
 
 
 public:
@@ -31,11 +32,11 @@ public:
         items--;
         std::cout << "student " << name << " expelled" << std::endl;
     }
-    void set_name(char *name_student)
+    void set_name(const std::string &name_student)
     {
         name = name_student;
     }
-    const char* get_name()
+    const std::string& get_name()
     {
         return name;
     }
@@ -47,7 +48,7 @@ public:
     {
         return weight;
     }
-    const char* get_gender()
+    const std::string get_gender()
     {
         return gender;
     }
@@ -122,7 +123,8 @@ int task1()
     std::cout << std::endl;
 
     puts("student name change");
-    student[1]->set_name(const_cast<char*>("Boris"));
+    const std::string fff = "dsafadsf";
+    student[1]->set_name("Boris");
     std::cout << std::endl;
 
     puts("displaying information about a student by the old name");
